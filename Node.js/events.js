@@ -12,12 +12,22 @@
 // eventEmitter.emit('DOG');   //emitter
 // console.log(listenerCount('warns'))
 
-const eventEmitter = require('events');
-class MyEmitter extends eventEmitter{};
-var emitter = new MyEmitter();
+// Counting the listener
+// const eventEmitter = require('events');
+// class MyEmitter extends eventEmitter{};
+// var emitter = new MyEmitter();
 
-emitter.on("events", ()=>{ 
-    console.log("event emitter");
+// emitter.on("events", ()=>{ 
+//     console.log("event emitter");
+// });
+
+// console.log(emitter.listenerCount("events"));
+const EventEmitter = require('events')
+
+const Logger = require('./logger')
+const logger = new Logger();
+
+logger.on('messageblog',(arg)=>{
+    arg.x=1; arg.y=2;
 });
-
-console.log(emitter.listenerCount("events"));
+logger.log('message')
