@@ -1,0 +1,13 @@
+1. 
+npm install express
+or 
+npm install -g express
+
+Add Dependency into the package.json  --> npm init
+npm install express --save
+npm update express 
+
+2.
+npm install body-parser --save (middleware for handling json/raw data/url)
+npm install cookie-parser --save
+npm install multer --save (multipart form data)
