@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EJS</title>
+    <title>Profile Page</title>
 </head>
 <body>
+    <%- include('common/nav') -%>
     <h1>Hello World!</h1>
+    <h3>Welcome dear <%= name%> </h3>
+    <p>Email: <%= data.email %></p>
+    <p>Skills: 
+        <ul>
+            <% data.skills.forEach((item)=>{%>
+                <li> 
+                    <%=item%>
+                </li>
+            <%})%>
+        </ul>
+    </p>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
 </body>
 </html>
