@@ -3,10 +3,27 @@ const path = require('path')
 
 const app = express()
 
+const members = [
+    {
+        id: 1,
+        name: 'John Doe',
+        email: 'john@gmail.com',
+        status: 'active'
+    },
+    {
+        id: 2,
+        name: 'Bob Williams',
+        email: 'bob@gmail.com',
+        status: 'inactive'
+    }
+]
+
 // app.get('/', (req,res)=> {
 //     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 // })
 
+// Gets all members
+app.get('/api/members', (req, res) => res.json(members))
 
 
 // Set static folder
