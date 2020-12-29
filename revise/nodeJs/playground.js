@@ -1,4 +1,5 @@
-var a = 20
-const getTodo = getting => setTimeout(() => getting({a: 30}) ,2000)
-console.log(a)
-getTodo(todo => console.log(todo.a))
+const arr1 = [1,2,3]
+const arr2 = [4,5,6]
+
+final = [...arr1, ...arr2]
+console.log(final)
